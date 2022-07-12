@@ -1,0 +1,14 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - run:
+          command: echo "hey"
+  #test:
+  #analyze:
+workflows:
+  my_work_flow:
+    jobs:
+      - build
